@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body>
+<main class="flex justify-center mt-10">
+    
+    <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <!-- account balance -->
+            <div class="stats shadow">
+                <div class="stat">
+                    <div class="stat-desc">Available balance</div>
+                  <div id="account-balance" class="stat-value">9400</div>
+                  
+                </div>
+              </div>
+
+              <div class="divider"></div>
+           <div>
+            <button id="show-add-money-form" class="btn btn-lg">Add Money</button>
+            <button id="show-cshout-form" class="btn btn-lg ml-2">Cash Out</button>
+            <button id="show-transection-history" class="btn btn-lg mt-2">Transaction</button>
+           </div>
+              <div class="divider"></div>
+
+              <!-- add money form start -->
+              <div id="add-money-form" class="  card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="input-add-money" type="text" placeholder="Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input id="pin-number" type="password" placeholder="your Pin number" class="input input-bordered" autocomplete="off" required />
+                    
+                  </div>
+                  <div id="btn-add-money" class="form-control mt-6">
+                    <button class="btn btn-primary">Add Money</button>
+                  </div>
+                </form>
+              </div>
+              <!-- add money form end -->
+
+              <!-- cash out form start -->
+              <div id="cashout-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="input-cashout" type="text" placeholder="Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input id="cashPin-number" type="password" placeholder="your Pin number" class="input input-bordered" autocomplete="off" required />
+                    
+                  </div>
+                  <div id="cashout-btn" class="form-control mt-6">
+                    <button class="btn btn-primary">Cash Out</button>
+                  </div>
+                </form>
+              </div>
+              <!-- cash out form  end -->
+
+              
+              <!-- transection start -->
+               <div id="transection-id" class="hidden space-y-3" >
+                <h2 class="text-3xl text-center"> Transection History</h2>
+               <div id="transection-container" class="">
+
+               </div>
+
+               </div>
+              <!-- transection end-->
+
+          </div>
+        </div>
+      </div>
+</main>
+
+<script src="js/utilities.js"></script>
+<script src="js/adsdmoney.js"></script>
+<script src="js/cashout.js"></script>
+<script src="js/feature.js"></script>
+
+    
+</body>
+</html>
